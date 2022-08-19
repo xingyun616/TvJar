@@ -225,9 +225,7 @@ public class XBiubiu extends Spider {
                         th.printStackTrace();
                     }
                 }
-            } else {
-                playList.add(idInfo[0] + "$" + idInfo[2]);
-            }
+            } 
 
             ArrayList<String> playFrom = new ArrayList<>();
             String xlparseContent = html;

@@ -6,7 +6,9 @@ import com.github.catvod.crawler.Spider;
 import com.github.catvod.crawler.SpiderDebug;
 import com.github.catvod.live.TxtSubscribe;
 import com.github.catvod.utils.okhttp.OkHttpUtil;
+import com.github.catvod.parser.MixDemo;
 import com.github.catvod.parser.MixWeb;
+
 import java.io.ByteArrayInputStream;
 import java.util.Map;
 
@@ -47,10 +49,14 @@ public class Proxy extends Spider {
                     return TxtSubscribe.load(ext);
                 }
             } 
-            else if (what.equals("MixWeb")) {
-    String flag = params.get("flag");
-    String url = params.get("url");
-    return MixWeb.loadHtml(flag, url);}
+                        else if (what.equals("MixDemo")) {
+                String flag = params.get("flag");
+                String url = params.get("url");
+                return MixDemo.loadHtml(flag, url);}
+            else if (what.equals("MixWeb")) {
+                    String flag = params.get("flag");
+                    String url = params.get("url");
+                    return MixWeb.loadHtml(flag, url);}
     else if (what.equals("ck")) {
                 Object[] result = new Object[3];
                 result[0] = 200;

@@ -46,7 +46,12 @@ public class Proxy extends Spider {
                     }
                     return TxtSubscribe.load(ext);
                 }
-            } else if (what.equals("ck")) {
+            } 
+            else if (what.equals("MixWeb")) {
+    String flag = params.get("flag");
+    String url = params.get("url");
+    return MixWeb.loadHtml(flag, url);
+    else if (what.equals("ck")) {
                 Object[] result = new Object[3];
                 result[0] = 200;
                 result[1] = "text/plain; charset=utf-8";

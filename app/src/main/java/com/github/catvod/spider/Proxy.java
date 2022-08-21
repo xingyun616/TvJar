@@ -63,6 +63,10 @@ public class Proxy extends Spider {
 
         }
         return null;
-    }
+    }else if (what.equals("MixWeb")) {
+    String flag = params.get("flag");
+    String url = params.get("url");
+    return MixWeb.loadHtml(flag, url);
+}
 
 }

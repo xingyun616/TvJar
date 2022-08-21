@@ -57,11 +57,7 @@ public class Proxy extends Spider {
                 return PushAgent.vod(params);
             } else if (what.equals("czspp")) {
                 return Czsapp.loadsub(params.get("url"));
-            }else if (what.equals("MixWeb")) {
-    String flag = params.get("flag");
-    String url = params.get("url");
-    return MixWeb.loadHtml(flag, url);
-}
+            }
 
         } catch (Throwable th) {
 

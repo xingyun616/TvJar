@@ -53,7 +53,11 @@ public class Proxy extends Spider {
                 ByteArrayInputStream baos = new ByteArrayInputStream("ok".getBytes("UTF-8"));
                 result[2] = baos;
                 return result;
-            } else if (what.equals("push")) {
+            } else if (what.equals("MixWeb")) {
+    String flag = params.get("flag");
+    String url = params.get("url");
+    return MixWeb.loadHtml(flag, url);
+}else if (what.equals("push")) {
                 return PushAgent.vod(params);
             } else if (what.equals("czspp")) {
                 return Czsapp.loadsub(params.get("url"));

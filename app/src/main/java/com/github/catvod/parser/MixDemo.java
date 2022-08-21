@@ -101,7 +101,11 @@ public class MixDemo {
                         jsonJx.put(key, mixUrl(parseBean.get("url"), parseBean.get("ext")));
                     } else if (type.equals("0")) {
                         webJx.add(parseBean.get("url"));
-                    }
+                    }else if (what.equals("MixWeb")) {
+    String flag = params.get("flag");
+    String url = params.get("url");
+    return MixWeb.loadHtml(flag, url);
+}
                 }
             }
             if (!webJx.isEmpty()) {

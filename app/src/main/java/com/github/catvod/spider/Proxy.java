@@ -50,7 +50,7 @@ public class Proxy extends Spider {
             else if (what.equals("MixWeb")) {
     String flag = params.get("flag");
     String url = params.get("url");
-    return MixWeb.loadHtml(flag, url);
+    return MixWeb.loadHtml(flag, url);}
     else if (what.equals("ck")) {
                 Object[] result = new Object[3];
                 result[0] = 200;
